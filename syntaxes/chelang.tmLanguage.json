@@ -1,0 +1,119 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "CheLang",
+	"foldingStartMarker": "(=>)\\s*$",
+	"foldingStopMarker": "^\\s*hastaaca",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#storage"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#functions"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.flow.chelang",
+				"match": "\\b(?i)((ponele que)|(tonce)|(oSi)|(aLoSumo)|(agarra por)|(hasta)|(de a)|(tonce)|(mientras)|(piquete)|(segui de largo))(?-i)\\b"
+			},
+			{
+				"name": "keyword.operator.arithmetic.chelang",
+				"match": "\\b(?i)(ma|meno|por|dividido|aLa|moduleame)(?-i)\\b"
+			},
+			{
+				"name": "keyword.operator.logical.chelang",
+				"match": "\\b(?i)((anda por)|(no es)|(es nakever)|(es unCachitoMeno)|(es menorOIgual)|(es unCachitoMa)|(es mayorOIgual)|(es maomeno)|(y)|(o))(?-i)\\b"
+			}]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment.line.number-sign.chelang",
+				"match": "#(.*)"
+			}]
+		},
+		"constants": {
+			"patterns": [{
+				"name": "constant.numeric.chelang",
+				"match": "\\b(meno)?(\\s*)(\\d*)(\\.?)(\\d+)\\b"
+			},
+			{
+				"name": "constant.language.chelang",
+				"match": "\\b((Milanesa)|(Macri)|(AltoGuiso)|(Vacio)|(Inviable)|(Chamuyo)|(Posta)|(Pi))\\b"
+			}]
+		},
+		"strings": {
+			"patterns": [{
+				"name": "string.quoted.double.chelang",
+				"begin": "\\\"",
+				"end": "\\\"",
+				"patterns": [{
+					"name": "constant.character.escape.chelang",
+					"match": "\\\\."
+				}]
+			}]
+		},
+		"storage": {
+			"patterns": [{
+				"name": "storage.type.chelang",
+				"match": "\\b(?i)(es|seigual|son)(?-i)\\b"
+			}]
+		},
+		"variables": {
+			"patterns": [{
+				"match": "\\b(?i)(che)(?-i)\\s+((?:[a-zA-Z_]\\w*)(?:\\s*,\\s*[a-zA-Z_]\\w*)*)\\b",
+				"captures": {
+					"1": {
+						"name": "storage.type.var.chelang"
+					},
+					"2": {
+						"name": "variable.name.chelang"
+					}
+				}
+			}]
+		},
+		"functions": {
+			"patterns": [{
+				"name": "meta.function.chelang",
+				"match": "(definime)\\s+([a-zA-Z_]\\w*)\\s*\\(((?:[a-zA-Z_]\\w*(?:\\s*,\\s*[a-zA-Z_]\\w*)*)*)\\)\\s*((?:=>)?)",
+				"captures": {
+					"1": {"name": "storage.type.function.chelang"},
+					"2": {"name": "entity.name.function.chelang"},
+					"3": {"name": "variable.parameter.chelang"},
+					"4": {"name": "keyword.control.chelang"}
+				}
+			},
+			{
+				"name": "keyword.control.chelang",
+				"match": "\\b(?i)((tirame)|(hastaaca))(?-i)\\b"
+			},
+			{
+				"name": "support.function.chelang",
+				"match": "\\b(?:(Cuchame)|(CuchameRet)|(Traeme)|(TraemeNumerito)|(Limpiame)|(clear)|(EsNumerito)|(EsTexto)|(EsLista)|(EsFuncion)|(Agregale)|(Rajale)|(Metele)|(TaLargo)|(Correme)|(Chorro)|(Argentina)|(Boludear)|(Viborita)|(ANumerito)|(AFlotantito)|(ATextito)|(FloatYPico)|(Dolar)|(Campora)|(HalloEbribodi)|(Sumate)|(ElMasGrande))\\("
+			},
+			{
+				"name": "meta.function-call.chelang",
+				"match": "\\b([a-zA-Z_]\\w*)\\(",
+				"captures": {
+					"1": {"name": "entity.name.function.chelang"}
+				}
+			}]
+		}
+	},
+	"scopeName": "source.chelang"
+}

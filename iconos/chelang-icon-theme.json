@@ -1,0 +1,11 @@
+{
+    
+    "iconDefinitions": {
+        "_chelang_arg": {
+            "iconPath": "./images/icons/arg-icon.svg"
+        }
+    },
+    "fileExtensions": {
+        "che": "_chelang_arg"
+    }
+}

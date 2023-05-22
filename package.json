@@ -1,0 +1,42 @@
+{
+  "name": "soporte-para-chelang",
+  "displayName": "Soporte para CheLang",
+  "description": "Soporte para el lenguaje esotérico argentino CheLang.",
+  "version": "0.0.1",
+  "private": "false",
+  "license": "GNU GPLv3",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "vscode": "^1.76.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "chelang",
+      "aliases": ["CheLang", "chelang"],
+      "extensions": [".che"],
+      "configuration": "./language-configuration.json",
+      "icon": {
+        "light": "./images/icons/arg-icon.png",
+        "dark": "./images/icons/arg-icon.png"
+      }
+    }],
+    "grammars": [{
+      "language": "chelang",
+      "scopeName": "source.chelang",
+      "path": "./syntaxes/chelang.tmLanguage.json"
+    }],
+    "iconThemes": [
+      {
+        "id": "chelang",
+        "label": "Íconos de Chelang",
+        "path": "./iconos/chelang-icon-theme.json"
+      }
+    ]
+  }
+}
