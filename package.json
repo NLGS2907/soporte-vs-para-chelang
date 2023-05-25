@@ -54,13 +54,6 @@
       "scopeName": "source.chelang",
       "path": "./syntaxes/chelang.tmLanguage.json"
     }],
-    "iconThemes": [
-      {
-        "id": "chelang",
-        "label": "Íconos de Chelang",
-        "path": "./iconos/chelang-icon-theme.json"
-      }
-    ],
     "configuration": {
       "title": "CheLang",
       "properties": {
