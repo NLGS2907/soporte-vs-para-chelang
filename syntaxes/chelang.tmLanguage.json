@@ -5,6 +5,9 @@
 	"foldingStopMarker": "^\\s*hastaaca",
 	"patterns": [
 		{
+			"include": "#constants"
+		},
+		{
 			"include": "#keywords"
 		},
 		{
@@ -12,9 +15,6 @@
 		},
 		{
 			"include": "#comments"
-		},
-		{
-			"include": "#constants"
 		},
 		{
 			"include": "#storage"
