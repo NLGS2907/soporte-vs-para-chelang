@@ -2,6 +2,7 @@
   "name": "soporte-para-chelang",
   "displayName": "Soporte para CheLang",
   "description": "Soporte para el lenguaje esotérico argentino CheLang.",
+  "icon": "images/icons/CheLangIcon.png",
   "version": "0.0.1",
   "private": "false",
   "license": "GNU GPLv3",
@@ -10,10 +11,11 @@
     "url": "https://github.com/NLGS2907/soporte-vs-para-chelang"
   },
   "engines": {
-    "vscode": "^1.76.0"
+    "vscode": "^1.78.0"
   },
   "categories": [
-    "Programming Languages"
+    "Programming Languages",
+    "Snippets"
   ],
   "activationEvents": [],
   "main": "./out/extension.js",
@@ -26,34 +28,52 @@
     "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
-    "@types/vscode": "^1.78.0",
     "@types/glob": "^8.1.0",
     "@types/mocha": "^10.0.1",
     "@types/node": "16.x",
+    "@types/vscode": "^1.78.0",
     "@typescript-eslint/eslint-plugin": "^5.59.1",
     "@typescript-eslint/parser": "^5.59.1",
+    "@vscode/test-electron": "^2.3.0",
     "eslint": "^8.39.0",
     "glob": "^8.1.0",
     "mocha": "^10.2.0",
-    "typescript": "^5.0.4",
-    "@vscode/test-electron": "^2.3.0"
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "vsce": "^2.15.0"
   },
   "contributes": {
-    "languages": [{
-      "id": "chelang",
-      "aliases": ["CheLang", "chelang"],
-      "extensions": [".che"],
-      "configuration": "./language-configuration.json",
-      "icon": {
-        "light": "./images/icons/arg-icon.png",
-        "dark": "./images/icons/arg-icon.png"
+    "languages": [
+      {
+        "id": "chelang",
+        "aliases": [
+          "CheLang",
+          "chelang"
+        ],
+        "extensions": [
+          ".che"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./images/icons/arg-icon.png",
+          "dark": "./images/icons/arg-icon.png"
+        }
       }
-    }],
-    "grammars": [{
-      "language": "chelang",
-      "scopeName": "source.chelang",
-      "path": "./syntaxes/chelang.tmLanguage.json"
-    }],
+    ],
+    "grammars": [
+      {
+        "language": "chelang",
+        "scopeName": "source.chelang",
+        "path": "./syntaxes/chelang.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "chelang",
+        "path": "./snippets/snippets.json"
+      }
+    ],
     "configuration": {
       "title": "CheLang",
       "properties": {
@@ -67,12 +87,22 @@
     "commands": [
       {
         "command": "chelang.runFile",
-        "title": "CheLang: Correr Archivo"
+        "title": "CheLang: Correr Archivo",
+        "icon": "$(play)"
       },
       {
         "command": "chelang.printTest",
         "title": "Prueba"
       }
-    ]
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "when": "resourceLangId == chelang",
+          "command": "chelang.runFile",
+          "group": "navigation"
+        }
+      ]
+    }
   }
 }

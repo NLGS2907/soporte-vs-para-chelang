@@ -1,0 +1,16 @@
+{
+    "loop 'agarra por'": {
+        "prefix": ["agarra por"],
+        "description": "Una plantilla de un loop 'agarra por'.",
+        "body": ["agarra por ${1:i} es ${2:0} hasta ${3:10} de a ${4:1} tonce",
+                 "\t#acá el código fachero",
+                 "hastaaca"]
+    },
+    "loop 'mientras'": {
+        "prefix": ["mientras"],
+        "description": "Una plantilla de un loop 'mientras'.",
+        "body": ["mientras ${1|Posta,Chamuyo|} tonce",
+                 "\t#acá el código fachero",
+                 "hastaaca"]
+    }
+}

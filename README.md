@@ -9,7 +9,9 @@ Se sabe que en otra ocasión [ya se intentó](https://github.com/leopaglia/chela
 ## Cosa' Buena'
 
 * *Syntax Highlight*
-* ...
+* ícono bien facherito
+* snippets
+* Botones de atajo para correr archivos, etc.
 
 ## Requerimiento'
 
@@ -19,14 +21,9 @@ Se sabe que en otra ocasión [ya se intentó](https://github.com/leopaglia/chela
 
 ## Configuraçao
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+Cosas para configurar CheLang viste:
 
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+* `chelang.runArgs.milicos`: Obliga a CheLang a laburar en findes y feriados, no tolera vagos.
 
 ## Limitaciones
 

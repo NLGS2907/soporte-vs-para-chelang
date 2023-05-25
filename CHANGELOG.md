@@ -1,9 +1,12 @@
-# Change Log
+# ChangeLog
 
-All notable changes to the "soporte-para-chelang" extension will be documented in this file.
+Todos los cambios polenta del proyecto.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## v0.0.1
 
-## [Unreleased]
+- Agregada la *Syntax Highlight*
+- Agregados los íconos
+- Agregados los snippets
+- agregados botones
 
-- Initial release
+<hr/>
