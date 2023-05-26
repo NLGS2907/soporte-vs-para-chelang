@@ -6,8 +6,7 @@ const commands_1 = require("./commands");
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
 function activate(context) {
-    context.subscriptions.push(vscode.commands.registerCommand('chelang.runFile', commands_1.runFileHandler));
-    context.subscriptions.push(vscode.commands.registerCommand('chelang.printTest', commands_1.pruebaHandler));
+    context.subscriptions.push(vscode.commands.registerCommand('chelang.runFile', commands_1.runFileHandler), vscode.commands.registerCommand('chelang.printTest', commands_1.pruebaHandler));
 }
 exports.activate = activate;
 // This method is called when your extension is deactivated

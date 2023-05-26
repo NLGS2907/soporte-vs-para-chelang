@@ -1,1 +1,11 @@
 che messi es 10
+
+agarra por i es 0 hasta 10 de a 1 tonce
+    ponele que i anda por 5 tonce
+        Cuchame(i)
+    oSi i anda por 6 tonce
+        Cuchame(i)
+    aLoSumo
+        Cuchame(i ma 1)
+    hastaaca
+hastaaca

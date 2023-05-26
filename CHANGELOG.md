@@ -8,5 +8,6 @@ Todos los cambios polenta del proyecto.
 - Agregados los íconos
 - Agregados los snippets
 - agregados botones
+- agregados soporte de *folding* y auto-indentación
 
 <hr/>
