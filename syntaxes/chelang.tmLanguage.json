@@ -76,7 +76,7 @@
 		},
 		"variables": {
 			"patterns": [{
-				"match": "\\b(?i)(che)(?-i)\\s+((?:[a-zA-Z_]\\w*)(?:\\s*,\\s*[a-zA-Z_]\\w*)*)\\b",
+				"match": "\\b(?i)((?:che)|(?:digamos que))(?-i)\\s+((?:[a-zA-Z_]\\w*)(?:\\s*,\\s*[a-zA-Z_]\\w*)*)\\b",
 				"captures": {
 					"1": {
 						"name": "storage.type.var.chelang"

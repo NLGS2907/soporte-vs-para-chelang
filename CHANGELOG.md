@@ -2,6 +2,10 @@
 
 Todos los cambios polenta del proyecto.
 
+## v0.1.0
+
+- Agregado language server
+
 ## v0.0.1
 
 - Agregada la *Syntax Highlight*

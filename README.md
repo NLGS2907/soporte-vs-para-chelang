@@ -19,6 +19,8 @@ Se sabe que en otra ocasión [ya se intentó](https://github.com/leopaglia/chela
 * Folding
 * Auto-Indentación
 * Botones de atajo para correr archivos, etc.
+* **Language Server**
+    - Auto Completado
 
 
 

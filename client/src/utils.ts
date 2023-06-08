@@ -1,4 +1,4 @@
-import {window} from "vscode";
+import { window } from "vscode";
 
 export function getTerminal(name: string) {
 	for (let terminal of window.terminals) {

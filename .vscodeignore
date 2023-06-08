@@ -1,4 +1,10 @@
 .vscode/**
 .vscode-test/**
 .gitignore
-vsc-extension-quickstart.md
+client/out/*.map
+client/src/
+server/src/
+tsconfig.json
+tslint.json
+package.json
+package-lock.json
